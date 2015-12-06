@@ -6,7 +6,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
-          <li class="username"><%= link_to current_user.name, user_path(current_user) %></li>
+          <li><%= link_to "New Event", new_event_path %></li>
+          <li><%= link_to current_user.name, user_path(current_user) %></li>
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
         <% else %>
           <li><%= link_to "Sign up", new_user_path %></li>

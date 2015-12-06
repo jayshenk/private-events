@@ -2,12 +2,11 @@
   <div class="container">
     <nav>
       <ul class="nav navbar-nav navbar-left">
-        <% if logged_in? %>
-          <li class="username"><%= link_to current_user.name, user_path(current_user) %></li>
-        <% end %>
+        <li><%= link_to "Events", root_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
+          <li class="username"><%= link_to current_user.name, user_path(current_user) %></li>
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
         <% else %>
           <li><%= link_to "Sign up", new_user_path %></li>

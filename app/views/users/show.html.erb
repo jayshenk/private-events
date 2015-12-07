@@ -8,9 +8,17 @@
 <% end %>
 <br><br>
 
-<h3>Attended Events:</h3>
+<h3>Upcoming Events:</h3>
 
-<% @user.attended_events.each do |event| %>
+<% @upcoming_events.each do |event| %>
+  <h4><%= link_to event.description, event %><h4>
+  <p class="small"><%= event.event_date %></p><br>
+<% end %>
+<br>
+
+<h3>Previously Attended Events:</h3>
+
+<% @prev_events.each do |event| %>
   <h4><%= link_to event.description, event %><h4>
   <p class="small"><%= event.event_date %></p><br>
 <% end %>
